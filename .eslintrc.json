@@ -1,0 +1,30 @@
+{
+    "root": true,
+    "plugins": [
+        "eslint-plugin",
+        "@typescript-eslint"
+    ],
+    "env": {
+        "es6": true,
+        "node": true,
+        "mocha": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "rules": {
+        "no-console": "off",
+        "linebreak-style": "off",
+        "quotes": [
+            "error",
+            "double",
+            { "allowTemplateLiterals": true }
+        ]
+    }
+}

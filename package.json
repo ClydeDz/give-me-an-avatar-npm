@@ -1,0 +1,45 @@
+{
+  "name": "give-me-an-avatar",
+  "displayName": "Get an avatar from a collection of different avatar options",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./lib/give-me-an-avatar.js",
+  "types": "./lib/give-me-an-avatar.d.ts",
+  "scripts": {
+    "build": "tsc && eslint \".\\src\\*.ts\"",
+    "test": "ts-mocha -p ./tsconfig.json tests/**/*.ts",
+    "test3": "mocha -r ts-node/register 'tests/**/*.ts'",
+    "test2": "nyc --reporter=lcov --reporter=cobertura mocha tests/*.test.js --reporter mocha-junit-reporter --timeout 10000 --exit",
+    "devtest": "nyc mocha tests/*.test.js",
+    "mocha": "mocha tests/*.test.js"
+  },
+  "files": [
+    "lib",
+    "LICENSE",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ClydeDz/give-me-an-avatar-npm.git"
+  },
+  "keywords": [
+    "avatar"
+  ],
+  "author": "Clyde D'Souza",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ClydeDz/give-me-an-avatar-npm/issues"
+  },
+  "homepage": "https://github.com/ClydeDz/give-me-an-avatar-npm#readme",
+  "devDependencies": {
+    "@types/chai": "^4.2.14",
+    "@types/mocha": "^8.2.0",
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1",
+    "mocha-junit-reporter": "^1.22.0",
+    "nyc": "^14.1.1",
+    "ts-mocha": "^8.0.0",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  }
+}
