@@ -1,6 +1,6 @@
 import { Utility } from "../src/utility";
 import { expect } from "chai";
-import { alphabets, avatarCollection, avatarSizeRange } from "../src/constants";
+import { alphabets, avatarCollection, avatarSizeRange, avatarExtraFilters } from "../src/constants";
 
 describe("getDefaultName", (): void => {  
     const util = new Utility();
@@ -23,6 +23,7 @@ describe("getDefaultSettings", (): void => {
         expect(actual).is.not.undefined;
         expect(actual.Name).is.not.empty;
         expect(actual.Size).is.not.NaN;
+        expect(actual.ExtraFilter).is.empty;
     });
 });
 
@@ -71,18 +72,53 @@ describe("validateAndCleanSettings", (): void => {
         const settings = {
             Size: 486
         }
-        const actual = util.validateAndCleanSettings(settings); 
+        const actual = util.validateAndCleanSettings(settings, "placeimg.com"); 
         expect(actual.Name).is.not.empty;
         expect(actual.Size).equals(486);
+        expect(actual.ExtraFilter).is.empty;
     }); 
 
     it("processes settings without size", (): void => {   
         const settings = {
             Name: "John Smith"
         }
-        const actual = util.validateAndCleanSettings(settings); 
+        const actual = util.validateAndCleanSettings(settings, "placeimg.com"); 
         expect(actual.Name).equals("John Smith");
         expect(actual.Size).is.not.null;
         expect(actual.Size).is.not.undefined;
+        expect(actual.ExtraFilter).is.empty;
     }); 
+
+    it("processes settings expecting extra filters", (): void => {   
+        const settings = {
+            Name: "John Smith"
+        }
+        const actual = util.validateAndCleanSettings(settings, "robohash.org"); 
+        expect(actual.Name).equals("John Smith");
+        expect(actual.Size).is.not.null;
+        expect(actual.Size).is.not.undefined;
+        expect(actual.ExtraFilter).is.not.empty;
+    }); 
+});
+
+describe("applyExtraFiltersToAvatarURL", (): void => {  
+    const util = new Utility();
+
+    it("returns valid filter when valid avatar key is supplied", (): void => {     
+        const actual = util.applyExtraFiltersToAvatarURL("robohash.org");
+        const robohashExtraFilters = avatarExtraFilters.filter((element): boolean => element[0] === "robohash.org")
+            .map((filterArrayElement): string => filterArrayElement[1]);  
+        expect(actual).is.not.empty;
+        expect(new Set(robohashExtraFilters)).to.include(actual);
+    });
+
+    it("returns empty filter when invalid avatar service key is supplied", (): void => {     
+        const actual = util.applyExtraFiltersToAvatarURL("this_service_does_not_exist"); 
+        expect(actual).is.empty; 
+    });
+
+    it("returns empty filter when valid avatar service key is supplied that doesn't have extra filters", (): void => {     
+        const actual = util.applyExtraFiltersToAvatarURL("placekitten.com"); 
+        expect(actual).is.empty; 
+    });
 });

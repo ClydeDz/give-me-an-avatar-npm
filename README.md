@@ -1,6 +1,11 @@
 # give-me-an-avatar-npm
 
 https://avatar.uimaterial.com/?setId=0496UVJDTqyd2eCIAa46&name=John&size=512
+https://avatar.uimaterial.com/?setId=8Pfmys5bgfL2NbXFG2sU&name=Austin&size=128
+
+https://avatar.uimaterial.com/?setId=SM2u3518GjohwtHQXNK0&name=Austin&size=128
+https://avatar.uimaterial.com/?setId=Pb7ErSM37KjjIZyJk8w6&name=Austin&size=128
+
 // also does colour https://via.placeholder.com/150/0000FF/808080?Text=A%20C
 // also supports colour https://dummyimage.com/128x128/e663e6/333ed6&text=U+X
 
@@ -14,7 +19,7 @@ https://avatars.dicebear.com/4.5/api/jdenticon/seed.svg
 https://avatars.dicebear.com/4.5/api/avataaars/seed.svgw
 https://avatars.dicebear.com/4.5/api/bottts/seed.svg
 https://avatars.dicebear.com/4.5/api/initials/seed.svg
-https://robohash.org/ss
+https://robohash.org/name?size=128x128&set=set2 1,2,3,4
 
 https://avataaars.io/?accessoriesType=Kurt
      
@@ -39,3 +44,8 @@ https://avataaars.io/?accessoriesType=Kurt
 | [gravatar.com](https://www.gravatar.com)    | ![image](https://www.gravatar.com/avatar/default?s=128)     |
 | [ui-avatars.com](https://www.ui-avatars.com)    | ![image](https://ui-avatars.com/api/?background=random&size=128&name=J%20S)     |
 | [generative-placeholders.glitch.me](https://generative-placeholders.glitch.me)       | ![image](https://generative-placeholders.glitch.me/image?width=128&height=128)     |
+| [robohash.org](https://robohash.org)       | ![image](https://robohash.org/John%20Smith?size=128x128&set=set1) ![image](https://robohash.org/John%20Smith?size=128x128&set=set2) ![image](https://robohash.org/John%20Smith?size=128x128&set=set3) ![image](https://robohash.org/John%20Smith?size=128x128&set=set4)     |
+| [avatars.dicebear.com](https://avatars.dicebear.com)     | ![image](https://avatars.dicebear.com/4.5/api/gridy/John%20Smith.svg?w=128&h=128) ![image](https://avatars.dicebear.com/4.5/api/human/John%20Smith.svg?w=128&h=128) ![image](https://avatars.dicebear.com/4.5/api/identicon/John%20Smith.svg?w=128&h=128) ![image](https://avatars.dicebear.com/4.5/api/jdenticon/John%20Smith.svg?w=128&h=128) ![image](https://avatars.dicebear.com/4.5/api/avataaars/John%20Smith.svg?w=128&h=128)  ![image](https://avatars.dicebear.com/4.5/api/bottts/John%20Smith.svg?w=128&h=128)             |
+| [avatar.uimaterial.com](https://avatar.uimaterial.com)     | ![image](https://avatar.uimaterial.com/?setId=0496UVJDTqyd2eCIAa46&name=John%20Smith&size=128) ![image](https://avatar.uimaterial.com/?setId=8Pfmys5bgfL2NbXFG2sU&name=John%20Smith&size=128) ![image](https://avatar.uimaterial.com/?setId=SM2u3518GjohwtHQXNK0&name=John%20Smith&size=128) ![image](https://avatar.uimaterial.com/?setId=Pb7ErSM37KjjIZyJk8w6&name=John%20Smith&size=128)   |
+
+I'm not using [avataaars](https://avataaars.io/) separately since [avatars.dicebear.com](https://avatars.dicebear.com) includes avataaars.

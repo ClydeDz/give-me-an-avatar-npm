@@ -1,10 +1,12 @@
 import { 
     AvatarSettings,
-    AvatarService
+    AvatarService,
+    AvatarExtraFilters
 } from "./models";
 import { 
     alphabets,
-    avatarSizeRange
+    avatarSizeRange,
+    avatarExtraFilters
 } from "./constants";
 
 export class Utility { 
@@ -22,15 +24,16 @@ export class Utility {
     public getDefaultSettings(): AvatarSettings {
         return {
             Name: this.getDefaultName(),
-            Size: this.getDefaultSize()
-        }
+            Size: this.getDefaultSize(),
+            ExtraFilter: ""
+        };
     }
 
-    public getRandomAvatarService(avatarCollection: [string, string][]): AvatarService {
-        const [Key, URL] = avatarCollection[Math.floor(Math.random() * avatarCollection.length)];
+    public getRandomAvatarService(avatars: [string, string][]): AvatarService {
+        const [key, url] = avatars[Math.floor(Math.random() * avatars.length)];
         return {
-            Key: Key,
-            URL: URL
+            Key: key,
+            URL: url
         };
     }
 
@@ -38,14 +41,28 @@ export class Utility {
         return new Function("return `"+templateString +"`;").call(templateVars);
     }
 
-    public validateAndCleanSettings(settings: AvatarSettings): AvatarSettings { 
-        if(!settings.Name){
+    public validateAndCleanSettings(settings: AvatarSettings, avatarServiceKey: string): AvatarSettings { 
+        if(!settings.Name) {
             settings.Name = this.getDefaultName();
         }
         if(!settings.Size) { 
             settings.Size = this.getDefaultSize();
         }
+        if(!settings.ExtraFilter) { 
+            settings.ExtraFilter = this.applyExtraFiltersToAvatarURL(avatarServiceKey);
+        }
         return settings;
+    }
+
+    public applyExtraFiltersToAvatarURL(avatarServiceKey: string): string {
+        const extraFilters = avatarExtraFilters.filter((element): boolean => 
+            element[AvatarExtraFilters.KEY] === avatarServiceKey);
+
+        if(extraFilters === undefined || extraFilters.length == 0){
+            return "";
+        }
+
+        return extraFilters[Math.floor(Math.random() * extraFilters.length)][AvatarExtraFilters.FILTERS]; 
     }
 }
 

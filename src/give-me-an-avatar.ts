@@ -12,9 +12,9 @@ export function giveMeAnAvatar(settings: AvatarSettings): string {
     if (!settings) {
         settings = util.getDefaultSettings();
     } 
-    
-    settings = util.validateAndCleanSettings(settings);
+
     const avatarService = util.getRandomAvatarService(avatarCollection);
+    settings = util.validateAndCleanSettings(settings, avatarService.Key);
     const avatarURL = util.processAvatarTemplate(avatarService.URL, settings);
     return avatarURL;
 } 
