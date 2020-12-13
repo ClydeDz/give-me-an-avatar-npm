@@ -6,5 +6,6 @@ describe("giveMeAnAvatar", (): void => {
         const actual = giveMeAnAvatar(null); 
         console.log(actual);
         expect(actual).is.not.undefined;
+        expect(actual).is.not.null;
     });
 });
