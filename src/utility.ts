@@ -34,6 +34,9 @@ export class Utility {
     }
 
     public validateAndCleanSettings(settings: AvatarSettings, avatarServiceKey: string): AvatarSettings { 
+        if(settings.Name) {
+            settings.Name = settings.Name.replace(/ /gi, "%20");
+        }
         if(!settings.Name) {
             settings.Name = this.getDefaultName();
         }

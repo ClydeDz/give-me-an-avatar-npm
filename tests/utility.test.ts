@@ -81,10 +81,10 @@ describe("validateAndCleanSettings", (): void => {
 
     it("processes settings without size", (): void => {   
         const settings = {
-            Name: "John Smith"
+            Name: "Jane"
         }
         const actual = util.validateAndCleanSettings(settings, "placeimg.com"); 
-        expect(actual.Name).equals("John Smith");
+        expect(actual.Name).equals("Jane");
         expect(actual.Size).is.not.null;
         expect(actual.Size).is.not.undefined;
         expect(actual.ExtraFilter).is.empty;
@@ -92,13 +92,31 @@ describe("validateAndCleanSettings", (): void => {
 
     it("processes settings expecting extra filters", (): void => {   
         const settings = {
-            Name: "John Smith"
+            Name: "Jane"
         }
         const actual = util.validateAndCleanSettings(settings, "robohash.org"); 
-        expect(actual.Name).equals("John Smith");
+        expect(actual.Name).equals("Jane");
         expect(actual.Size).is.not.null;
         expect(actual.Size).is.not.undefined;
         expect(actual.ExtraFilter).is.not.empty;
+    }); 
+
+    it("processes settings with a name that contains a space", (): void => {   
+        const settings = {
+            Name: "John Smith"
+        }
+        const actual = util.validateAndCleanSettings(settings, "placeimg.com"); 
+        expect(actual.Name).is.not.empty;
+        expect(actual.Name).equals("John%20Smith");
+    }); 
+
+    it("processes settings with a name that contains multiple spaces", (): void => {   
+        const settings = {
+            Name: "John David Smith"
+        }
+        const actual = util.validateAndCleanSettings(settings, "placeimg.com"); 
+        expect(actual.Name).is.not.empty;
+        expect(actual.Name).equals("John%20David%20Smith");
     }); 
 });
 
