@@ -1,4 +1,4 @@
-# give-me-an-avatar-npm  
+# Give Me an Avatar
 TODO   
 
 ## Supported avatar services

@@ -1,17 +1,14 @@
 {
   "name": "give-me-an-avatar",
-  "displayName": "Get an avatar from a collection of different avatar options",
-  "version": "0.0.1",
-  "description": "",
+  "displayName": "Give Me an Avatar",
+  "version": "0.1.0",
+  "description": "Gets a random avatar URL from a collection of different avatar generation services.",
   "main": "./lib/give-me-an-avatar.js",
   "types": "./lib/give-me-an-avatar.d.ts",
   "scripts": {
     "build": "tsc && eslint \".\\src\\*.ts\"",
-    "test": "ts-mocha -p ./tsconfig.json tests/**/*.ts",
-    "test3": "mocha -r ts-node/register 'tests/**/*.ts'",
-    "test2": "nyc --reporter=lcov --reporter=cobertura mocha tests/*.test.js --reporter mocha-junit-reporter --timeout 10000 --exit",
-    "devtest": "nyc mocha tests/*.test.js",
-    "mocha": "mocha tests/*.test.js"
+    "test": "ts-mocha -p ./tsconfig.json tests/**/*.ts --reporter mocha-junit-reporter",
+    "mocha": "ts-mocha -p ./tsconfig.json tests/**/*.ts"
   },
   "files": [
     "lib",
@@ -37,7 +34,6 @@
     "chai": "^4.2.0",
     "mocha": "^8.2.1",
     "mocha-junit-reporter": "^1.22.0",
-    "nyc": "^14.1.1",
     "ts-mocha": "^8.0.0",
     "ts-node": "^9.1.1",
     "typescript": "^4.1.3"

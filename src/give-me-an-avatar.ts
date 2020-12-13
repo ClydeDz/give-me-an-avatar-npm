@@ -2,7 +2,7 @@ import { AvatarSettings } from "./models";
 import { Utility } from "./utility";
 import { avatarCollection } from "./constants";
  
-export {  AvatarSettings } from "./models";
+export { AvatarSettings } from "./models";
 
 export function giveMeAnAvatar(settings: AvatarSettings): string {
     const util = new Utility();
