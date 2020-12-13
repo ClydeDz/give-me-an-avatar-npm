@@ -10,8 +10,8 @@ describe("getDefaultName", (): void => {
         const actual = util.getDefaultName(); 
         expect(actual).is.not.null;
         expect(actual).is.not.undefined;
-        expect(alphabets.includes(actual.split(" ")[0])).to.be.true;
-        expect(alphabets.includes(actual.split(" ")[1])).to.be.true;
+        expect(alphabets.includes(actual.split("%20")[0])).to.be.true;
+        expect(alphabets.includes(actual.split("%20")[1])).to.be.true;
     });
 });
 

@@ -6,7 +6,7 @@ export class Utility {
     public getDefaultName(): string {
         const firstName = alphabets[Math.floor(Math.random() * alphabets.length)];
         const lastName = alphabets[Math.floor(Math.random() * alphabets.length)];
-        return `${firstName} ${lastName}`;
+        return `${firstName}%20${lastName}`;
     }
     
     public getDefaultSize(): number {
