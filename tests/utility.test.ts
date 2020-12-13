@@ -1,6 +1,7 @@
 import { Utility } from "../src/utility";
 import { expect } from "chai";
 import { alphabets, avatarCollection, avatarSizeRange, avatarExtraFilters } from "../src/constants";
+import { AvatarExtraFilters } from "../src/models";
 
 describe("getDefaultName", (): void => {  
     const util = new Utility();
@@ -106,7 +107,8 @@ describe("applyExtraFiltersToAvatarURL", (): void => {
 
     it("returns valid filter when valid avatar key is supplied", (): void => {     
         const actual = util.applyExtraFiltersToAvatarURL("robohash.org");
-        const robohashExtraFilters = avatarExtraFilters.filter((element): boolean => element[0] === "robohash.org")
+        const robohashExtraFilters = avatarExtraFilters
+            .filter((element): boolean => element[AvatarExtraFilters.KEY] === "robohash.org")
             .map((filterArrayElement): string => filterArrayElement[1]);  
         expect(actual).is.not.empty;
         expect(new Set(robohashExtraFilters)).to.include(actual);
