@@ -1,28 +1,5 @@
-# give-me-an-avatar-npm
-
-https://avatar.uimaterial.com/?setId=0496UVJDTqyd2eCIAa46&name=John&size=512
-https://avatar.uimaterial.com/?setId=8Pfmys5bgfL2NbXFG2sU&name=Austin&size=128
-
-https://avatar.uimaterial.com/?setId=SM2u3518GjohwtHQXNK0&name=Austin&size=128
-https://avatar.uimaterial.com/?setId=Pb7ErSM37KjjIZyJk8w6&name=Austin&size=128
-
-// also does colour https://via.placeholder.com/150/0000FF/808080?Text=A%20C
-// also supports colour https://dummyimage.com/128x128/e663e6/333ed6&text=U+X
-
-
-
-
-https://avatars.dicebear.com/4.5/api/gridy/seed.svg You can also omit seed for a random avat
-https://avatars.dicebear.com/4.5/api/human/seed.svg
-https://avatars.dicebear.com/4.5/api/identicon/seed.svg?w=51&h=51
-https://avatars.dicebear.com/4.5/api/jdenticon/seed.svg
-https://avatars.dicebear.com/4.5/api/avataaars/seed.svgw
-https://avatars.dicebear.com/4.5/api/bottts/seed.svg
-https://avatars.dicebear.com/4.5/api/initials/seed.svg
-https://robohash.org/name?size=128x128&set=set2 1,2,3,4
-
-https://avataaars.io/?accessoriesType=Kurt
-     
+# give-me-an-avatar-npm  
+TODO   
 
 ## Supported avatar services
 

@@ -1,13 +1,5 @@
-import { 
-    AvatarSettings,
-    AvatarService,
-    AvatarExtraFilters
-} from "./models";
-import { 
-    alphabets,
-    avatarSizeRange,
-    avatarExtraFilters
-} from "./constants";
+import { AvatarSettings, AvatarService, AvatarExtraFilters} from "./models";
+import { alphabets, avatarSizeRange, avatarExtraFilters } from "./constants";
 
 export class Utility { 
 
