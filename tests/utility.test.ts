@@ -1,10 +1,12 @@
-import { Utility } from "../src/utility";
-import { expect } from "chai";
+// import { Utility } from "../src/utility";
+// import { expect } from "chai"; 
 
-describe("Options tests", (): void => {  
-    it("checking default options", (): void => {  
-        const util = new Utility();
-        const actual = util.trimInvalidCharactersIfExists("https://avataaars.io/?"); 
-        expect(actual).to.equal("https://avataaars.io/");
-    });
-});
+// describe("getDefaultSize", (): void => {  
+//     it("returns random default size that's not undefined or empty", (): void => {  
+//         const util = new Utility();
+//         const actual = util.getDefaultSize(); 
+//         console.log(actual);
+//         expect(actual).is.not.undefined;
+//         expect(actual).is.not.empty;
+//     });
+// });
