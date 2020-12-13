@@ -127,7 +127,7 @@ describe("applyExtraFiltersToAvatarURL", (): void => {
         const actual = util.applyExtraFiltersToAvatarURL("robohash.org");
         const robohashExtraFilters = avatarExtraFilters
             .filter((element): boolean => element[AvatarExtraFilters.KEY] === "robohash.org")
-            .map((filterArrayElement): string => filterArrayElement[1]);  
+            .map((filterArrayElement): string => filterArrayElement[AvatarExtraFilters.FILTERS]);  
         expect(actual).is.not.empty;
         expect(new Set(robohashExtraFilters)).to.include(actual);
     });
