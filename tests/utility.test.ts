@@ -1,6 +1,6 @@
 import { Utility } from "../src/utility";
 import { expect } from "chai";
-import { alphabets, avatarCollection } from "../src/constants";
+import { alphabets, avatarCollection, avatarSizeRange } from "../src/constants";
 
 describe("getDefaultName", (): void => {  
     const util = new Utility();
@@ -33,7 +33,8 @@ describe("getDefaultSize", (): void => {
         const actual = util.getDefaultSize(); 
         expect(actual).is.not.null;
         expect(actual).is.not.undefined;
-        expect(actual).is.equal(512);
+        expect(actual).is.greaterThan(avatarSizeRange.Min-1);
+        expect(actual).is.lessThan(avatarSizeRange.Max-1);
     });
 });
 

@@ -2,7 +2,10 @@ import {
     AvatarSettings,
     AvatarService
 } from "./models";
-import { alphabets } from "./constants";
+import { 
+    alphabets,
+    avatarSizeRange
+} from "./constants";
 
 export class Utility { 
 
@@ -13,7 +16,7 @@ export class Utility {
     }
     
     public getDefaultSize(): number {
-        return 512;
+        return Math.floor(Math.random() * (avatarSizeRange.Max - avatarSizeRange.Min + 1)) + avatarSizeRange.Min;
     }   
 
     public getDefaultSettings(): AvatarSettings {
