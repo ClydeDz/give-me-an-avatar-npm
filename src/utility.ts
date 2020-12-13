@@ -37,7 +37,7 @@ export class Utility {
 
     public validateAndCleanSettings(settings: AvatarSettings): AvatarSettings { 
         if(!settings.Name){
-            settings.Name = "";
+            settings.Name = this.getDefaultName();
         }
         if(!settings.Size) { 
             settings.Size = this.getDefaultSize();

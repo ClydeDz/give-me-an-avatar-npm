@@ -71,7 +71,7 @@ describe("validateAndCleanSettings", (): void => {
             Size: 486
         }
         const actual = util.validateAndCleanSettings(settings); 
-        expect(actual.Name).is.empty;
+        expect(actual.Name).is.not.empty;
         expect(actual.Size).equals(486);
     }); 
 
