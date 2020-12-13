@@ -64,6 +64,48 @@ describe("processAvatarTemplate", (): void => {
         const actual = util.processAvatarTemplate(templateString, templateVariables); 
         expect(actual).equals("https://placeimg.com/486/486/people"); 
     }); 
+
+    it("when extra filters is supplied", (): void => {  
+        const templateString = "https://robohash.org/${this.Name}?size=${this.Size}x${this.Size}${this.ExtraFilter}";   
+        const templateVariables = {
+            Name: "Paul",
+            Size: 786,
+            ExtraFilter: "&set=set1"
+        }
+        const actual = util.processAvatarTemplate(templateString, templateVariables); 
+        expect(actual).equals("https://robohash.org/Paul?size=786x786&set=set1"); 
+    }); 
+
+    it("when extra filters is supplied but there's a typo in the property", (): void => {  
+        const templateString = "https://robohash.org/${this.Name}?size=${this.Size}x${this.Size}${this.ExtraFilter}";   
+        const templateVariables = {
+            Name: "Paul",
+            Size: 786,
+            ExtraFilters: "&set=set1"
+        }
+        const actual = util.processAvatarTemplate(templateString, templateVariables); 
+        expect(actual).equals("https://robohash.org/Paul?size=786x786undefined"); 
+    }); 
+
+    it("when extra filters is not supplied but template uses it - uimaterial", (): void => {  
+        const templateString = "https://avatar.uimaterial.com/?name=${this.Name}&size=${this.Size}${this.ExtraFilter}";   
+        const templateVariables = {
+            Name: "Paul",
+            Size: 786
+        }
+        const actual = util.processAvatarTemplate(templateString, templateVariables); 
+        expect(actual).equals("https://avatar.uimaterial.com/?name=Paul&size=786undefined"); 
+    }); 
+
+    it("when extra filters is not supplied but template uses it - dicebear", (): void => {  
+        const templateString = "https://avatars.dicebear.com/api${this.ExtraFilter}/${this.Name}.svg?w=${this.Size}&h=${this.Size}";   
+        const templateVariables = {
+            Name: "Paul",
+            Size: 786
+        }
+        const actual = util.processAvatarTemplate(templateString, templateVariables); 
+        expect(actual).equals("https://avatars.dicebear.com/apiundefined/Paul.svg?w=786&h=786"); 
+    }); 
 });
 
 describe("validateAndCleanSettings", (): void => {  
