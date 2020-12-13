@@ -59,6 +59,29 @@ describe("processAvatarTemplate", (): void => {
             Size: 486
         }
         const actual = util.processAvatarTemplate(templateString, templateVariables); 
-        expect(actual).to.equal("https://placeimg.com/486/486/people"); 
+        expect(actual).equals("https://placeimg.com/486/486/people"); 
+    }); 
+});
+
+describe("validateAndCleanSettings", (): void => {  
+    const util = new Utility();
+
+    it("processes settings without name", (): void => {   
+        const settings = {
+            Size: 486
+        }
+        const actual = util.validateAndCleanSettings(settings); 
+        expect(actual.Name).is.empty;
+        expect(actual.Size).equals(486);
+    }); 
+
+    it("processes settings without size", (): void => {   
+        const settings = {
+            Name: "John Smith"
+        }
+        const actual = util.validateAndCleanSettings(settings); 
+        expect(actual.Name).equals("John Smith");
+        expect(actual.Size).is.not.null;
+        expect(actual.Size).is.not.undefined;
     }); 
 });

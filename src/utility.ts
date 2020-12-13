@@ -34,5 +34,15 @@ export class Utility {
     public processAvatarTemplate(templateString: string, templateVars: AvatarSettings): string {
         return new Function("return `"+templateString +"`;").call(templateVars);
     }
+
+    public validateAndCleanSettings(settings: AvatarSettings): AvatarSettings { 
+        if(!settings.Name){
+            settings.Name = "";
+        }
+        if(!settings.Size) { 
+            settings.Size = this.getDefaultSize();
+        }
+        return settings;
+    }
 }
 

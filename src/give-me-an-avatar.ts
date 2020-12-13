@@ -13,6 +13,7 @@ export function giveMeAnAvatar(settings: AvatarSettings): string {
         settings = util.getDefaultSettings();
     } 
     
+    settings = util.validateAndCleanSettings(settings);
     const avatarService = util.getRandomAvatarService(avatarCollection);
     const avatarURL = util.processAvatarTemplate(avatarService.URL, settings);
     return avatarURL;
