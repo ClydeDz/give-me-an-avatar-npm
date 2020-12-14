@@ -1,6 +1,8 @@
 export interface AvatarSettings {
     Name?: string;
     Size?: number;
+}
+export interface PrivateAvatarSettings extends AvatarSettings {
     ExtraFilter?: string;
 }
 export interface AvatarService {

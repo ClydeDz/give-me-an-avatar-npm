@@ -1,4 +1,4 @@
-import { AvatarSettings, AvatarService, AvatarExtraFilters} from "./models";
+import { AvatarService, AvatarExtraFilters, PrivateAvatarSettings } from "./models";
 import { alphabets, avatarSizeRange, avatarExtraFilters } from "./constants";
 
 export class Utility { 
@@ -13,7 +13,7 @@ export class Utility {
         return Math.floor(Math.random() * (avatarSizeRange.Max - avatarSizeRange.Min + 1)) + avatarSizeRange.Min;
     }   
 
-    public getDefaultSettings(): AvatarSettings {
+    public getDefaultSettings(): PrivateAvatarSettings {
         return {
             Name: this.getDefaultName(),
             Size: this.getDefaultSize(),
@@ -29,11 +29,11 @@ export class Utility {
         };
     }
 
-    public processAvatarTemplate(templateString: string, templateVars: AvatarSettings): string {
+    public processAvatarTemplate(templateString: string, templateVars: PrivateAvatarSettings): string {
         return new Function("return `"+templateString +"`;").call(templateVars);
     }
 
-    public validateAndCleanSettings(settings: AvatarSettings, avatarServiceKey: string): AvatarSettings { 
+    public validateAndCleanSettings(settings: PrivateAvatarSettings, avatarServiceKey: string): PrivateAvatarSettings { 
         if(settings.Name) {
             settings.Name = settings.Name.replace(/ /gi, "%20");
         }

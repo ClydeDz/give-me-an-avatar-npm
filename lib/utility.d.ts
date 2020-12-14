@@ -1,10 +1,10 @@
-import { AvatarSettings, AvatarService } from "./models";
+import { AvatarService, PrivateAvatarSettings } from "./models";
 export declare class Utility {
     getDefaultName(): string;
     getDefaultSize(): number;
-    getDefaultSettings(): AvatarSettings;
+    getDefaultSettings(): PrivateAvatarSettings;
     getRandomAvatarService(avatars: [string, string][]): AvatarService;
-    processAvatarTemplate(templateString: string, templateVars: AvatarSettings): string;
-    validateAndCleanSettings(settings: AvatarSettings, avatarServiceKey: string): AvatarSettings;
+    processAvatarTemplate(templateString: string, templateVars: PrivateAvatarSettings): string;
+    validateAndCleanSettings(settings: PrivateAvatarSettings, avatarServiceKey: string): PrivateAvatarSettings;
     applyExtraFiltersToAvatarURL(avatarServiceKey: string): string;
 }
