@@ -1,0 +1,41 @@
+{
+  "name": "give-me-an-avatar",
+  "displayName": "Give Me an Avatar",
+  "version": "0.1.0",
+  "description": "Gets a random avatar URL from a collection of different avatar generation services.",
+  "main": "./lib/give-me-an-avatar.js",
+  "types": "./lib/give-me-an-avatar.d.ts",
+  "scripts": {
+    "build": "tsc && eslint \".\\src\\*.ts\"",
+    "test": "ts-mocha -p ./tsconfig.json tests/**/*.ts --reporter mocha-junit-reporter",
+    "mocha": "ts-mocha -p ./tsconfig.json tests/**/*.ts"
+  },
+  "files": [
+    "lib",
+    "LICENSE",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ClydeDz/give-me-an-avatar-npm.git"
+  },
+  "keywords": [
+    "avatar"
+  ],
+  "author": "Clyde D'Souza",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ClydeDz/give-me-an-avatar-npm/issues"
+  },
+  "homepage": "https://github.com/ClydeDz/give-me-an-avatar-npm#readme",
+  "devDependencies": {
+    "@types/chai": "^4.2.14",
+    "@types/mocha": "^8.2.0",
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1",
+    "mocha-junit-reporter": "^1.22.0",
+    "ts-mocha": "^8.0.0",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  }
+}
