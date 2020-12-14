@@ -1,5 +1,13 @@
 # Give Me an Avatar
-TODO   
+Gets a random avatar URL from a collection of different avatar generation services.   
+
+[![Build status](https://clydedsouza.visualstudio.com/Give%20Me%20an%20Avatar%20npm/_apis/build/status/Give%20Me%20an%20Avatar%20Main)](https://clydedsouza.visualstudio.com/Give%20Me%20an%20Avatar%20npm/_build/latest?definitionId=32)
+[![Azure DevOps tests](https://img.shields.io/azure-devops/tests/clydedsouza/Give%20Me%20an%20Avatar%20npm/32?logo=azuredevops)](https://clydedsouza.visualstudio.com/Give%20Me%20an%20Avatar%20npm/_build?definitionId=32) 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ClydeDz_give-me-an-avatar-npm&metric=alert_status)](https://sonarcloud.io/dashboard?id=ClydeDz_give-me-an-avatar-npm) 
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=ClydeDz_give-me-an-avatar-npm&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=ClydeDz_give-me-an-avatar-npm) 
+![MIT License](https://img.shields.io/static/v1.svg?label=📜%20License&message=MIT&color=informational) 
+[![npm](https://img.shields.io/npm/v/give-me-an-avatar?color=brightgreen&logo=npm)](https://bit.ly/give-me-an-avatar)     
+    
 
 ## Supported avatar services
 
@@ -25,4 +33,8 @@ TODO
 | [avatars.dicebear.com](https://avatars.dicebear.com)     | ![image](https://avatars.dicebear.com/4.5/api/gridy/John%20Smith.svg?w=128&h=128) ![image](https://avatars.dicebear.com/4.5/api/human/John%20Smith.svg?w=128&h=128) ![image](https://avatars.dicebear.com/4.5/api/identicon/John%20Smith.svg?w=128&h=128) ![image](https://avatars.dicebear.com/4.5/api/jdenticon/John%20Smith.svg?w=128&h=128) ![image](https://avatars.dicebear.com/4.5/api/avataaars/John%20Smith.svg?w=128&h=128)  ![image](https://avatars.dicebear.com/4.5/api/bottts/John%20Smith.svg?w=128&h=128)             |
 | [avatar.uimaterial.com](https://avatar.uimaterial.com)     | ![image](https://avatar.uimaterial.com/?setId=0496UVJDTqyd2eCIAa46&name=John%20Smith&size=128) ![image](https://avatar.uimaterial.com/?setId=8Pfmys5bgfL2NbXFG2sU&name=John%20Smith&size=128) ![image](https://avatar.uimaterial.com/?setId=SM2u3518GjohwtHQXNK0&name=John%20Smith&size=128) ![image](https://avatar.uimaterial.com/?setId=Pb7ErSM37KjjIZyJk8w6&name=John%20Smith&size=128)   |
 
-I'm not using [avataaars](https://avataaars.io/) separately since [avatars.dicebear.com](https://avatars.dicebear.com) includes avataaars.
+I'm not using [avataaars](https://avataaars.io/) separately since [avatars.dicebear.com](https://avatars.dicebear.com) includes avataaars.  
+
+## Credits   
+All the avatar services used in this npm package are outlined in the table above. 
+This NPM package is developed by [Clyde D'Souza](https://twitter.com/clydedz).
