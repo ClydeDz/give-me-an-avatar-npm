@@ -13,8 +13,5 @@ export function giveMeAnAvatar(settings: AvatarSettings): string {
 
     const avatarService = util.getRandomAvatarService(avatarCollection);
     settings = util.validateAndCleanSettings(settings, avatarService.Key);
-    const avatarURL = util.processAvatarTemplate(avatarService.URL, settings);
-    return avatarURL;
-} 
-
-
+    return util.processAvatarTemplate(avatarService.URL, settings); 
+}
