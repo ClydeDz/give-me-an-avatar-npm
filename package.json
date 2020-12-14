@@ -1,7 +1,7 @@
 {
   "name": "give-me-an-avatar",
   "displayName": "Give Me an Avatar",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Gets a random avatar URL from a collection of different avatar generation services.",
   "main": "./lib/give-me-an-avatar.js",
   "types": "./lib/give-me-an-avatar.d.ts",
