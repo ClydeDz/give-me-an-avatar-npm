@@ -10,6 +10,6 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "give-me-an-avatar": "^0.1.0"
+    "give-me-an-avatar": "^0.3.0"
   }
 }
