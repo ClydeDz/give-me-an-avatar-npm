@@ -16,7 +16,8 @@
   "files": [
     "dist",
     "LICENSE",
-    "README.md"
+    "README.md",
+    "icon.jpg"
   ],
   "repository": {
     "type": "git",
@@ -37,11 +38,14 @@
     "uimaterial avatars",
     "jdenticon",
     "human avatars",
+    "bacon avatar",
     "pixel-art avatar",
     "ui-avatars",
     "generative-placeholders",
     "picsum",
     "random avatars",
+    "dummyimage",
+    "dummyimage avatar",
     "avataaar",
     "javascript",
     "typescript"
