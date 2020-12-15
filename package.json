@@ -1,17 +1,20 @@
 {
   "name": "give-me-an-avatar",
   "displayName": "Give Me an Avatar",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Gets a random avatar URL from a collection of different avatar generation services.",
-  "main": "./lib/give-me-an-avatar.js",
-  "types": "./lib/give-me-an-avatar.d.ts",
+  "source": "./src/give-me-an-avatar.ts",
+  "main": "./dist/give-me-an-avatar.js",
+  "types": "./dist/give-me-an-avatar.d.ts",
+  "module": "./dist/give-me-an-avatar.modern.js",
+  "unpkg": "./dist/give-me-an-avatar.umd.js",  
   "scripts": {
-    "build": "tsc && eslint --ext .js,.ts \".\\src\\*.ts\"",
+    "build": "eslint --ext .js,.ts \".\\src\\*.ts\" && microbundle",
     "test": "ts-mocha -p ./tsconfig.json tests/**/*.ts --reporter mocha-junit-reporter",
     "mocha": "ts-mocha -p ./tsconfig.json tests/**/*.ts"
   },
   "files": [
-    "lib",
+    "dist",
     "LICENSE",
     "README.md"
   ],
@@ -56,6 +59,7 @@
     "@typescript-eslint/parser": "^4.9.1",
     "chai": "^4.2.0",
     "eslint": "^7.15.0",
+    "microbundle": "^0.12.4",
     "mocha": "^8.2.1",
     "mocha-junit-reporter": "^1.22.0",
     "ts-mocha": "^8.0.0",
