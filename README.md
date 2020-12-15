@@ -1,3 +1,10 @@
+<div align="center">
+	<br>
+	<img width="172" src="icon.jpg" alt="Give me an avatar npm package icon">
+	<br>
+	<br>
+</div>
+
 # Give Me an Avatar
 Gets a random avatar URL from a collection of different avatar generation services.   
 
@@ -16,9 +23,9 @@ const avatars = require("give-me-an-avatar");
 Consume the `giveMeAnAvatar()` API to get an avatar URL that you can use directly as an image. You can either call the method directly or supply the settings object to customize your avatar (only a bit). All settings are pretty self-explanatory and are not mandatory. For example:
 ```javascript
 let image = avatars.giveMeAnAvatar({
-            Name: "John Smith",
-            Size: 128
-        }); 
+                Name: "John Smith",
+                Size: 128
+            }); 
 ```
 The image variable will have the avatar image URL.    
      
@@ -50,5 +57,6 @@ The image variable will have the avatar image URL.
 I'm not using [avataaars](https://avataaars.io/) separately since [avatars.dicebear.com](https://avatars.dicebear.com) includes avataaars.  
 
 ## Credits   
-All the avatar services used in this npm package are outlined in the table above. 
-This NPM package is developed by [Clyde D'Souza](https://twitter.com/clydedz).
+- All the avatar services used in this npm package are outlined in the table above.    
+- Package logo created using [AutoDraw](https://www.autodraw.com/).   
+- This NPM package is developed by [Clyde D'Souza](https://twitter.com/clydedz).
