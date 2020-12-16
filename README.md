@@ -29,6 +29,8 @@ let image = avatars.giveMeAnAvatar({
 ```
 The image variable will have the avatar image URL.    
      
+If you'd like to consume this package via a CDN, please see [this demo](https://github.com/ClydeDz/give-me-an-avatar-npm/blob/main/demo/index.html).   
+    
 
 ## Supported avatar services
 
