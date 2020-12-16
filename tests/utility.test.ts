@@ -33,10 +33,10 @@ describe("getDefaultSize", (): void => {
 
     it("returns valid default size", (): void => {     
         const actual = util.getDefaultSize(); 
+        const inclusiveMax = avatarSizeRange.Max-1;
         expect(actual).is.not.null;
         expect(actual).is.not.undefined;
-        expect(actual).is.greaterThan(avatarSizeRange.Min-1);
-        expect(actual).is.lessThan(avatarSizeRange.Max-1);
+        expect(actual).to.be.within(avatarSizeRange.Min, inclusiveMax); 
     });
 });
 
