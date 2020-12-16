@@ -41,6 +41,6 @@ export const alphabets: string[] = [ "A", "B", "C", "D", "E", "F", "G", "H", "I"
     "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" ]; 
 
 export enum avatarSizeRange {
-    Min = 16,
+    Min = 96,
     Max = 512
 }
