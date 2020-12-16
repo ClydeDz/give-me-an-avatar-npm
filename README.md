@@ -36,7 +36,7 @@ The image variable will have the avatar image URL.
 |--------------------------------------------|------------------------------------------------------|
 | [placeholder.com](https://placeholder.com) | ![image](https://via.placeholder.com/128?Text=J%20S) |
 | [placeimg.com](https://placeimg.com)       | ![image](https://placeimg.com/128/128/people)        |
-| [placekitten.com](https://placekitten.com) | ![image](https://placekitten.com/g/128/128)          |
+| [placekitten.com](https://placekitten.com) | ![image](https://placekitten.com/g/128/128?cache=invalidate)          |
 | [dummyimage.com](https://dummyimage.com/)  | ![image](https://dummyimage.com/128x128&text=J%20S)  |
 | [loremflickr.com](https://loremflickr.com) | ![image](https://loremflickr.com/128/128/human)      |
 | [baconmockup.com](https://baconmockup.com) | ![image](https://baconmockup.com/128/128/)           |
@@ -54,7 +54,9 @@ The image variable will have the avatar image URL.
 | [avatars.dicebear.com](https://avatars.dicebear.com)     | ![image](https://avatars.dicebear.com/4.5/api/gridy/John%20Smith.svg?w=128&h=128) ![image](https://avatars.dicebear.com/4.5/api/human/John%20Smith.svg?w=128&h=128) ![image](https://avatars.dicebear.com/4.5/api/identicon/John%20Smith.svg?w=128&h=128) ![image](https://avatars.dicebear.com/4.5/api/jdenticon/John%20Smith.svg?w=128&h=128) ![image](https://avatars.dicebear.com/4.5/api/avataaars/John%20Smith.svg?w=128&h=128)  ![image](https://avatars.dicebear.com/4.5/api/bottts/John%20Smith.svg?w=128&h=128)             |
 | [avatar.uimaterial.com](https://avatar.uimaterial.com)     | ![image](https://avatar.uimaterial.com/?setId=0496UVJDTqyd2eCIAa46&name=John%20Smith&size=128) ![image](https://avatar.uimaterial.com/?setId=8Pfmys5bgfL2NbXFG2sU&name=John%20Smith&size=128) ![image](https://avatar.uimaterial.com/?setId=SM2u3518GjohwtHQXNK0&name=John%20Smith&size=128) ![image](https://avatar.uimaterial.com/?setId=Pb7ErSM37KjjIZyJk8w6&name=John%20Smith&size=128)   |
 
-I'm not using [avataaars](https://avataaars.io/) separately since [avatars.dicebear.com](https://avatars.dicebear.com) includes avataaars.  
+## Notes
+* I'm not using [avataaars](https://avataaars.io/) separately since [avatars.dicebear.com](https://avatars.dicebear.com) includes avataaars.    
+* Placekitten image might appear broken at times in the table above, however, the image service itself runs fine.     
 
 ## Credits   
 - All the avatar services used in this npm package are outlined in the table above.    
