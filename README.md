@@ -1,6 +1,6 @@
 <div align="center">
 	<br>
-	<img width="172" src="icon.jpg" alt="Give me an avatar npm package icon">
+	<img width="172" src="https://raw.githubusercontent.com/ClydeDz/give-me-an-avatar-npm/main/icon.jpg" alt="Give me an avatar npm package icon">
 	<br>
 	<br>
 </div>
