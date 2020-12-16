@@ -1,7 +1,7 @@
 {
   "name": "give-me-an-avatar",
   "displayName": "Give Me an Avatar",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Gets a random avatar URL from a collection of different avatar generation services.",
   "source": "./src/give-me-an-avatar.ts",
   "main": "./dist/give-me-an-avatar.js",
@@ -16,7 +16,8 @@
   "files": [
     "dist",
     "LICENSE",
-    "README.md"
+    "README.md",
+    "icon.jpg"
   ],
   "repository": {
     "type": "git",
@@ -37,11 +38,14 @@
     "uimaterial avatars",
     "jdenticon",
     "human avatars",
+    "bacon avatar",
     "pixel-art avatar",
     "ui-avatars",
     "generative-placeholders",
     "picsum",
     "random avatars",
+    "dummyimage",
+    "dummyimage avatar",
     "avataaar",
     "javascript",
     "typescript"
