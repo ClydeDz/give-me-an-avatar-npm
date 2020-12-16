@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <!-- If you're using a CDN to fetch the JS -->
+        <!-- <script src="https://cdn.jsdelivr.net/npm/give-me-an-avatar@0.4.1/dist/give-me-an-avatar.umd.js"></script> -->
+        <script src="https://unpkg.com/give-me-an-avatar@0.4.1/dist/give-me-an-avatar.umd.js"></script>
+        <script>
+            const avatars = window.giveMeAnAvatar;
+            console.log("(Using a CDN)", 
+            avatars.giveMeAnAvatar({
+                    Name: "Arch Niko",
+                    Size: 124
+                })
+            );
+        </script>
+        <!-- If you're using a service like wzrd.in -->
+        <!-- 
+        <script src="https://wzrd.in/bundle/give-me-an-avatar@latest"></script>
+        <script> 
+            const avatars = require("give-me-an-avatar"); 
+            console.log("(Using wzrd.in)", 
+            avatars.giveMeAnAvatar({
+                    Name: "Arch Niko",
+                    Size: 124
+                })
+            );
+        </script> 
+        -->
+    </head>
+</html>
