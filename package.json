@@ -1,7 +1,7 @@
 {
   "name": "give-me-an-avatar",
   "displayName": "Give Me an Avatar",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Gets a random avatar URL from a collection of different avatar generation services.",
   "source": "./src/give-me-an-avatar.ts",
   "main": "./dist/give-me-an-avatar.js",
@@ -12,9 +12,6 @@
     "build": "eslint --ext .js,.ts \".\\src\\*.ts\" && microbundle",
     "test": "ts-mocha -p ./tsconfig.json tests/**/*.ts --reporter mocha-junit-reporter",
     "mocha": "ts-mocha -p ./tsconfig.json tests/**/*.ts"
-  },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org"
   },
   "files": [
     "dist",
