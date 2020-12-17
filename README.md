@@ -16,11 +16,16 @@ Gets a random avatar URL from a collection of different avatar generation servic
 [![npm](https://img.shields.io/npm/v/give-me-an-avatar?color=brightgreen&logo=npm)](https://bit.ly/give-me-an-avatar)     
     
 ## Usage
+Install the package from npm using the following command.
+```NPM Config
+npm i give-me-an-avatar
+```
+
 After installing, simply import Give Me an Avatar in your file.
 ```javascript
 const avatars = require("give-me-an-avatar");
 ```
-Consume the `giveMeAnAvatar()` API to get an avatar URL that you can use directly as an image. You can either call the method directly or supply the settings object to customize your avatar (only a bit). All settings are pretty self-explanatory and are not mandatory. For example:
+Consume the `giveMeAnAvatar()` API to get an avatar URL that you can use directly as an image. You can either call the method without any parameters or supply the settings object to customize your avatar a bit. All settings are pretty self-explanatory and are not mandatory. For example:
 ```javascript
 let image = avatars.giveMeAnAvatar({
                 Name: "John Smith",
