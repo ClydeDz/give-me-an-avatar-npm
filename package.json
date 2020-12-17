@@ -1,7 +1,7 @@
 {
   "name": "give-me-an-avatar",
   "displayName": "Give Me an Avatar",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Gets a random avatar URL from a collection of different avatar generation services.",
   "source": "./src/give-me-an-avatar.ts",
   "main": "./dist/give-me-an-avatar.js",
@@ -71,7 +71,6 @@
     "mocha-junit-reporter": "^1.22.0",
     "nyc": "^15.1.0",
     "ts-mocha": "^8.0.0",
-    "ts-node": "^9.1.1",
     "typescript": "^4.1.2"
   }
 }
