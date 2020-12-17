@@ -54,13 +54,13 @@ describe("getRandomAvatarService", (): void => {
     it("returns an error message when a null object is passed", (): void => {     
         expect(() => {
             util.getRandomAvatarService(null); 
-        }).to.throw("Cannot read property 'length' of null");        
+        }).to.throw(Error);        
     });
 
     it("returns an error message when an empty array is passed", (): void => {     
         expect(() => {
             util.getRandomAvatarService([]); 
-        }).to.throw("avatars[Math.floor(...)] is not iterable");                
+        }).to.throw(Error);  
     });
 
     it("returns empty string key-URL values when input supplied contains empty strings only", (): void => {           
